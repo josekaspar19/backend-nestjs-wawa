@@ -14,12 +14,17 @@ datasource db {
 }
 
 model busRoutes {
-  id          String  @id @default(cuid())
-  title       String  @db.VarChar(50)
-  origin      String
-  destination String
-  price       Int
-  active      Boolean
+  id            String  @id @default(cuid())
+  title         String  @db.VarChar(50)
+  origin        String
+  destination   String
+  departureDate String
+  departureTime String
+  arrivalDate   String
+  arrivalTime   String
+  duration      String
+  price         Int
+  active        Boolean
 
   createdAt DateTime @default(now())
   updatedAt DateTime @updatedAt
